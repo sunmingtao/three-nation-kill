@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:messages"/>
+		<property name="defaultEncoding" value="gb2312"/>
+	</bean>
+	
+	<bean id="threeNationKillService" class="com.smt.threenationkill.service.ThreeNationKillServiceImpl">
+		<property name="playerDao" ref="playerDao"/>
+		<property name="gameDao" ref="gameDao"/>
+	</bean>
+
+	<bean id="playerDao" class="com.smt.threenationkill.dao.PlayerDaoImpl">
+		<property name="db" ref="db"/>
+	</bean>
+	
+	<bean id="gameDao" class="com.smt.threenationkill.dao.GameDaoImpl">
+		<property name="db" ref="db"/>
+	</bean>
+
+	<bean id="db" class="com.smt.threenationkill.dao.ThreeNationKillDB" />
+	
+</beans>

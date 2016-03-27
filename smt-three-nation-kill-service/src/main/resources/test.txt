@@ -1,0 +1,11 @@
+2010-09-04 5 xujun mo laosun Lina/qianfuren zhugongsheng
+2010-09-04 5 Lina xujun qianfuren mo/laosun zhugongsheng
+2010-09-04 5 Lina qianfuren xujun laosun/mo zhugongsheng
+2010-09-04 5 laosun Lina mo qianfuren/xujun zhugongsheng
+2010-09-04 5 mo Lina xujun laosun/qianfuren zhugongsheng
+2010-09-04 6 xiaoma xujun mo laosun/Lina/qianfuren neijiansheng
+2010-09-04 5 mo xujun xiaoma qianfuren/laosun fanzeisheng
+2010-09-04 6 xiaoma xujun qianfuren longren/mo/laosun zhugongsheng
+2010-09-04 6 laosun xiaoma mo qianfuren/longren/xujun fanzeisheng
+2010-09-04 6 qianfuren xiaoma laosun longren/xujun/mo fanzeisheng
+2010-09-04 6 qianfuren longren mo laosun/xiaoma/xujun neijiansheng

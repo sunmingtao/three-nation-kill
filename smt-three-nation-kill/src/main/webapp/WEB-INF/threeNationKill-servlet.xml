@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/playerList.do">playerListController</prop>
+				<prop key="/gameList.do">gameListController</prop>
+				<prop key="/playerDetail.do">playerDetailController</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean name="playerListController" class="com.smt.threenationkill.web.PlayerListController">
+		<property name="service" ref="threeNationKillService" />
+	</bean>
+	
+	<bean name="gameListController" class="com.smt.threenationkill.web.GameListController">
+		<property name="service" ref="threeNationKillService" />
+	</bean>
+	
+	<bean name="playerDetailController" class="com.smt.threenationkill.web.PlayerDetailController">
+		<property name="service" ref="threeNationKillService" />
+	</bean>
+	
+	<!--
+	<bean name="detailController" class="com.smt.web.DetailController">
+		<property name="service" ref="service" />
+		<property name="formView" value="detail"/>
+		<property name="successView" value="redirect:detail.do"/>
+		<property name="commandClass" value="com.smt.model.Person" />
+		<property name="commandName" value="person" />
+	</bean>-->
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+</beans>
